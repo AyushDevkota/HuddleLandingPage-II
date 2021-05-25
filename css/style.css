@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 15px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  background: url(../images/bg-hero-desktop.svg) #ebfbff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .title {
+  margin: 3em auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .title .logo {
+  height: 1.5em;
+}
+
+header .title .white-btn {
+  border-radius: 10em;
+  font-weight: 700;
+  padding: 1em 4em;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+header .title .white-btn:hover {
+  color: #a6a6a6;
+}
+
+header .content {
+  margin-bottom: 2em;
+  gap: 5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .content .text-holder p {
+  margin-bottom: 2em;
+}
+
+header .content .text-holder .pink-btn {
+  border-radius: 10em;
+  font-weight: 700;
+  padding: 1em 4em;
+  background-color: #ff52bf;
+  color: #fff;
+}
+
+header .content .text-holder .pink-btn:hover {
+  background-color: #ff85d2;
+}
+
+header .content .img-holder img {
+  max-width: 600px;
+}
+
+.main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+}
+
+.main .card {
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  padding: 2em 3em;
+  gap: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .card:first-child {
+  margin-top: 10em;
+}
+
+.main .card .text-placer {
+  max-width: 100%;
+}
+
+.main .card .img-placer img {
+  max-height: 250px;
+}
+/*# sourceMappingURL=style.css.map */
