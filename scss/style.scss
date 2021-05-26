@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: url(../images/bg-hero-desktop.svg) $very-pale-cyan  ;
+    background: url(../images/bg-hero-desktop.svg) $very-pale-cyan;
     @include column;
     .title {
         margin: 3em auto;
@@ -15,59 +15,187 @@ header {
         .logo {
             height: 1.5em;
         }
-        .white-btn {
-            @include btn; 
-            background-color: #fff;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-            &:hover {
-                color: hsl(0, 0%, 65%);
-            }
-        }
     }
     .content {
         margin-bottom: 2em;
-        gap: 5em;
+        gap: 3em;
         @include align-center;
         .text-holder {
+            flex-basis: 50%;
             p {
                 margin-bottom: 2em;
             }
-            .pink-btn {
-                @include btn;
-                background-color: $pink;
-                color: #fff;
-                &:hover {
-                    background-color: lighten($pink, 10%);
-                }
-            }
         }
         .img-holder {
+            flex-basis: 50%;
             img {
-                max-width: 600px;
+                width: 100%;
             }
         }
     }
 }
 
-.main {
+section {
     @include column;
     gap: 2em;
+    margin-bottom: 8em;
     .card {
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         border-radius: 0.5em;
         padding: 2em 3em;
-        gap: 2em;
+        gap: 3em;
         @include align-center;
         &:first-child {
             margin-top: 10em;
         }
         .text-placer {
-            max-width: 100%;
+            flex-basis: 70%;
+            p {
+                color: hsl(0, 0%, 60%);
+            }
         }
         .img-placer {
+            flex-basis: 30%;
             img {
-                max-height: 250px;
+                max-width: 100%;
             }
+        }
+    }
+}
+
+
+.footer {
+    .side {
+        @include column;
+        min-width: 600px;
+        width: 50%;
+        margin: 0 auto;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5em;
+        position: relative;
+        top: 4em;
+        padding: 2em;
+        background-color: #fff;
+        text-align: center;
+        .pink-btn {
+            align-self: center;
+        }
+    }
+    &-main{
+        background-color: $very-dark-cyan;
+        padding-top: 10em;
+        padding-bottom: 3em;
+        color: hsl(0, 0%, 70%);
+        font-size: 15px;
+    }
+    .d-flex {
+        gap: 2em;
+    }
+    .column {
+        gap: 4em;
+    }
+    .info-I {
+        flex-basis: 40%;
+        @include column;
+        .location {
+            height: 1.5em;
+        }
+    }
+    a {
+        font-size: 15px;
+    }
+    .info-II, .info-III {
+        @include column;
+        @include align-center;
+        flex-basis: 15%;
+        a{
+            color: hsl(0, 0%, 70%)
+        };
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    .icon {
+        flex-basis: 30%;
+        @include align-center;
+        gap: 1em;
+        i {
+            border: 1px solid #fff;
+            border-radius: 10em;
+            padding: 0.5em;
+            &:hover {
+                color: $pink;
+                border-color: $pink;
+                cursor: pointer;
+            }
+        }
+        .fa-facebook-f {
+            padding: 0.5em 0.7em;
+        }
+    }
+    .copyright {
+        margin-top: 1em;
+        font-size: 12px;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 90%;
+    }
+    p, a {
+        font-size: 16px;
+    }
+    body {
+        font-size: 18px;
+    }
+    header {
+        background: url(../images/bg-hero-mobile.svg) $very-pale-cyan center;
+        .title {
+            .logo {
+                height: 1em;
+            }
+            .white-btn {
+                padding: 0.5em 2em;
+            }
+        }
+        .content {
+            @include column;
+            text-align: center;
+        }
+    }
+    section {
+        .card {
+            @include column;
+            text-align: center;
+            &:first-child {
+                margin-top: 5em;
+            }
+            .text-placer {
+                order: 2;
+            }
+        }
+    }
+    .footer {
+        .side {
+            width: 90%;
+            max-width: auto;
+            min-width: auto;
+        }
+        .column {
+            @include column;
+            gap: 1.85em;
+        }
+        .info-I, .info-III, .icon {
+            margin-bottom: 2em;
+        }
+        .info-II, .info-III {
+            @include column;
+            @include flex-start;
+        }
+        .copyright {
+            justify-content: center;
         }
     }
 }
